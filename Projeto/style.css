@@ -1,0 +1,195 @@
+/* Estilo geral */
+body {
+    font-family: "VT323", monospace;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 20px;
+    color: #000000;
+    background-image: url('assets/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    min-height: 100vh;
+    image-rendering: pixelated;
+}
+
+/* Container */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.716);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    border: 2px;
+    position: relative;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+select {
+    width: 100%;
+    padding: 8px;
+    background-color: #fffef6;
+    border: 2px;
+    box-shadow: inset -1px -1px 0 #000;
+    font-size: 20px;
+    color: #000;
+    box-sizing: border-box;
+    font-family: "VT323", monospace;
+}
+
+
+button {
+    font-family: "VT323", monospace;
+    font-size: 22px;
+    background-color: #fffef6;
+    border: 2px solid navy;
+    padding: 8px 12px;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 2px 2px 0 #000;
+    transition: all 0.1s ease-in-out;
+    width: 100%;
+    margin-top: 10px;
+    letter-spacing: 1px;
+}
+
+button:hover {
+    background-color: #e6f7ff;
+    transform: translate(1px, 1px);
+    box-shadow: 1px 1px 0 #000;
+}
+
+
+.display-options {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.display-options button {
+    width: auto;
+    padding: 8px 12px;
+}
+
+.corner-left-icon {
+    position: absolute;
+    bottom: -20px;
+    left: -20px;
+    width: 60px;
+    height: 100px;
+    animation: flutuar 1.5s ease-in-out infinite;
+    filter: drop-shadow(2px 2px 0 #5fb405ba);
+}
+
+.corner-fixed {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 30px; 
+    height: auto;
+    z-index: 10;
+    image-rendering: pixelated;
+    filter: drop-shadow(2px 2px 0 #000);
+}
+
+.corner-image {
+    position: fixed;
+    width: 200px;
+    height: auto;
+    z-index: 999;
+    animation: balanco 2s ease-in-out infinite;
+    filter: drop-shadow(0 0 5px #01ddffd2);
+}
+
+.top-right {
+    top: 10px;
+    right: 10px;
+}
+
+.bottom-left {
+    bottom: 10px;
+    left: 10px;
+    animation: girar 4s linear infinite; 
+}
+
+
+h1, h2 {
+    font-family: "Audiowide", sans-serif;
+    color: #000000;
+    text-align: center;
+    letter-spacing: 3px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 1.2em;
+}
+
+#listaTarefas {
+    margin-top: 20px;
+}
+
+.tarefa-card {
+    background: rgba(255, 255, 255, 0.789);
+    border-left: 4px solid #0073ff;
+    padding: 10px 15px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.tarefa-card.concluida {
+    opacity: 0.7;
+    border-left-color: #4eda03;
+}
+
+.tarefa-texto {
+    flex-grow: 1;
+    font-size: 1.2em;
+}
+
+.tarefa-card.concluida .tarefa-texto {
+    text-decoration: line-through;
+    color: #4bcf04c5;
+    z-index: 1;
+}
+
+.tarefa-acoes button {
+    width: auto;
+    margin-left: 10px;
+    font-size: 1em;
+    padding: 5px 10px;
+}
+
+
+@keyframes balanco {
+    0%   { transform: rotate(0deg); }
+    25%  { transform: rotate(5deg); }
+    50%  { transform: rotate(0deg); }
+    75%  { transform: rotate(-5deg); }
+    100% { transform: rotate(0deg); }
+}
+
+@keyframes flutuar {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); }
+}
+
+@keyframes girar {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+

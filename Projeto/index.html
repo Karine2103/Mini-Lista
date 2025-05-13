@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas Cyber</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Audiowide&family=VT323&display=swap" rel="stylesheet">
+</head>
+<body>
+    <img src="assets/image1.png" class="corner-image top-right" alt="decorativo">
+    <img src="assets/disco.png" class="corner-image bottom-left" alt="decorativo">
+    <audio id="click-sound" src="assets/sound.mp3" preload="auto"></audio>
+
+    <div class="container">
+        <img src="assets/character.png" alt="Decoração" class="corner-left-icon">
+        <img src="assets/close.png" class="corner-fixed" alt="decorativo">
+        <h1>LISTA DE TAREFAS</h1>
+        
+        <form id="formTarefa">
+            <div class="form-group">
+                <label for="tarefa">Nova Tarefa:</label>
+                <input type="text" id="tarefa" required>
+            </div>
+            <button type="submit">ADICIONAR TAREFA</button>
+        </form>
+        
+        <div class="display-options">
+            <button id="btnTodas">TODAS</button>
+            <button id="btnConcluidas">CONCLUÍDAS</button>
+            <button id="btnPendentes">PENDENTES</button>
+        </div>
+        
+        <h2>TAREFAS</h2>
+        <div id="listaTarefas"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
